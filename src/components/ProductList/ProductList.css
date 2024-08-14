@@ -1,0 +1,23 @@
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 95%;
+    margin: 20px auto;
+    justify-items: center;
+}
+
+.nodata{
+    width: 100%;
+    background-color: pink;
+    border: 2px solid red;
+}
+
+.no-products-message {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+    margin-top: 20px;
+    width: 100%;
+}
+
