@@ -7,8 +7,10 @@ const ProductList = ({ isLoggedIn, searchQuery }) => {
     const [products, setProducts] = useState([]);
     const [selectedProduct, setSelectedProduct] = useState(null);
 
+    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
     useEffect(() => {
-        fetch('http://localhost:3001/products')
+        fetch(`${API_BASE_URL}/products`)
             .then(response => response.json())
             .then(data => setProducts(data))
             .catch(error => console.error('Error fetching products:', error));

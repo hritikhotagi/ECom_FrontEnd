@@ -8,6 +8,8 @@ const AddProduct = () => {
     const [description, setDescription] = useState('');
     const [image, setImage] = useState(null);
     const [message, setMessage] = useState('');
+    
+    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
     const handleImageChange = (e) => {
         setImage(e.target.files[0]);
@@ -23,7 +25,7 @@ const AddProduct = () => {
         formData.append('image', image);
 
         try {
-            const response = await fetch('http://localhost:3001/products', {
+            const response = await fetch(`${API_BASE_URL}/products`, {
                 method: 'POST',
                 body: formData,
             });

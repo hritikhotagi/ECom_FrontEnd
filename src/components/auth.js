@@ -1,8 +1,9 @@
 // src/auth.js
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 export const loginUser = async (username, password) => {
     try {
-        const response = await fetch('http://localhost:3001/login', {
+        const response = await fetch(`${API_BASE_URL}/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -35,7 +36,7 @@ export const logoutUser = () => {
 
 export const registerUser = async (username, password) => {
     try {
-        const response = await fetch('http://localhost:3001/register', {
+        const response = await fetch(`${API_BASE_URL}/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
