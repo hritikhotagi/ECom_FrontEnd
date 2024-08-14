@@ -1,4 +1,3 @@
-// src/pages/LoginPage.js
 import React, { useState } from 'react';
 import './Login.css';
 import { loginUser, registerUser } from '../auth';
@@ -16,7 +15,7 @@ const LoginPage = ({ onLogin }) => {
             const result = await loginUser(username, password);
             if (result) {
                 onLogin();
-                navigate('/'); // Redirect to Home page
+                navigate('/');
             } else {
                 alert('Invalid credentials');
             }
