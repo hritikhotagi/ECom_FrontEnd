@@ -17,11 +17,11 @@ const HomePage = ({ isLoggedIn, onLogout }) => {
         <div className="home-page">
             <Navbar isLoggedIn={isLoggedIn} onLogout={onLogout} onSearch={handleSearch} />
             <BannerCarousel />
-            <div className="home-actions">
+            {/* <div className="home-actions">
                 <Link to="/add-product" className="add-product-button">
                     <button className="button">Add New Product</button>
                 </Link>
-            </div>
+            </div> */}
             <div className="product">
                 <ProductList searchQuery={searchQuery} isLoggedIn={isLoggedIn} />
             </div>
